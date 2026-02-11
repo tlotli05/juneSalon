@@ -2,14 +2,14 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes, viewport-fit=cover">
   <title>June Laced — the private atelier</title>
-  <!-- Absolute silence. Absolute luxury. -->
+  <!-- Pure luxury. No compromise. -->
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Inter:wght@200;300;400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
   <style>
     /* ————————————————————————————————————————————————————————————————————
-       THE PINNACLE OF LUXURY · BEYOND COMPETITION · YOUR IDENTITY
+       ULTIMATE LUXURY · MOBILE-FIRST · PERFECT MARQUEE · PROPER CREDIT
        Soft White:   #F8F6F3 – 70% dominance
        Warm Ivory:   #F1ECE6 – 20% sections
        Nude Beige:   #D8C3B2 – 10% accents
@@ -29,11 +29,15 @@
       color: #4A3A32;
       font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
       font-weight: 200;
-      font-size: 13px;
-      line-height: 1.85;
+      font-size: 14px;
+      line-height: 1.8;
       letter-spacing: 0.01em;
       -webkit-font-smoothing: antialiased;
       overflow-x: hidden;
+    }
+
+    body.menu-open {
+      overflow: hidden;
     }
 
     h1, h2, h3, h4, .serif-luxe {
@@ -65,7 +69,7 @@
     }
 
     .micro-body {
-      font-size: 12px;
+      font-size: 13px;
       color: #6F625A;
       font-weight: 200;
       line-height: 1.9;
@@ -79,32 +83,74 @@
       font-weight: 200;
     }
 
-    /* ———— MONUMENTAL WHITE SPACE — 140px PADDING, 180px MARGINS ———— */
+    /* ———— MOBILE-FIRST WHITE SPACE — PERFECTLY CENTRALIZED ———— */
     .container {
+      width: 100%;
       max-width: 1300px;
       margin: 0 auto;
-      padding: 0 140px;
+      padding: 0 24px;
     }
 
-    @media (max-width: 1100px) {
-      .container { padding: 0 60px; }
+    @media (min-width: 768px) {
+      .container {
+        padding: 0 60px;
+      }
+    }
+
+    @media (min-width: 1200px) {
+      .container {
+        padding: 0 140px;
+      }
     }
 
     .section {
-      margin: 180px 0;
+      margin: 100px 0;
     }
 
-    .section-sm {
-      margin: 140px 0;
+    @media (min-width: 768px) {
+      .section {
+        margin: 140px 0;
+      }
+    }
+
+    @media (min-width: 1200px) {
+      .section {
+        margin: 180px 0;
+      }
+    }
+
+    /* ———— CENTRALIZED CONTENT UTILITY ———— */
+    .text-center {
+      text-align: center;
+    }
+
+    .mx-auto {
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .max-width-md {
+      max-width: 600px;
+    }
+
+    .max-width-sm {
+      max-width: 480px;
     }
 
     /* ———— GOLD DIVIDERS — SUBTLE, UNMISTAKABLE ———— */
     .divider-gold {
-      width: 80px;
+      width: 60px;
       height: 0.5px;
       background: #C6A46C;
-      margin: 40px 0 56px;
+      margin: 32px auto;
       opacity: 0.6;
+    }
+
+    @media (min-width: 768px) {
+      .divider-gold {
+        width: 80px;
+        margin: 40px auto 56px;
+      }
     }
 
     /* ———— ICON ORBS — PURE WHITE, FLOATING ———— */
@@ -112,25 +158,33 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      width: 52px;
-      height: 52px;
+      width: 48px;
+      height: 48px;
       background: white;
       border-radius: 50%;
       box-shadow: 0 16px 32px -14px rgba(0,0,0,0.02);
-      padding: 14px;
+      padding: 12px;
       flex-shrink: 0;
     }
 
     .orb-sm {
-      width: 42px;
-      height: 42px;
-      padding: 11px;
+      width: 40px;
+      height: 40px;
+      padding: 10px;
     }
 
     .orb-lg {
-      width: 72px;
-      height: 72px;
-      padding: 18px;
+      width: 64px;
+      height: 64px;
+      padding: 16px;
+    }
+
+    @media (min-width: 768px) {
+      .orb-lg {
+        width: 72px;
+        height: 72px;
+        padding: 18px;
+      }
     }
 
     .orb img {
@@ -140,39 +194,70 @@
       display: block;
     }
 
-    /* ———— STICKY HEADER — ALMOST IMMATERIAL ———— */
+    /* ———— STICKY HEADER — WITH HAMBURGER MENU ———— */
     .sticky-header {
       position: sticky;
       top: 0;
       width: 100%;
-      background: rgba(248, 246, 243, 0.72);
-      backdrop-filter: blur(28px);
-      -webkit-backdrop-filter: blur(28px);
+      background: rgba(248, 246, 243, 0.85);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 20px 140px;
+      padding: 16px 24px;
       z-index: 1000;
       border-bottom: 0.5px solid rgba(198, 164, 108, 0.08);
+    }
+
+    @media (min-width: 768px) {
+      .sticky-header {
+        padding: 20px 60px;
+      }
+    }
+
+    @media (min-width: 1200px) {
+      .sticky-header {
+        padding: 20px 140px;
+      }
     }
 
     .logo-group {
       display: flex;
       align-items: center;
-      gap: 12px;
+      gap: 10px;
     }
 
     .logo-text {
       font-family: 'Cormorant Garamond', serif;
-      font-size: 19px;
-      letter-spacing: 4.5px;
+      font-size: 18px;
+      letter-spacing: 4px;
       font-weight: 300;
       color: #4A3A32;
     }
 
+    @media (min-width: 768px) {
+      .logo-text {
+        font-size: 19px;
+        letter-spacing: 4.5px;
+      }
+    }
+
     .nav-links {
-      display: flex;
-      gap: 64px;
+      display: none;
+    }
+
+    @media (min-width: 900px) {
+      .nav-links {
+        display: flex;
+        gap: 48px;
+      }
+    }
+
+    @media (min-width: 1200px) {
+      .nav-links {
+        gap: 64px;
+      }
     }
 
     .nav-links a {
@@ -191,21 +276,262 @@
       border-bottom-color: #C6A46C;
     }
 
+    /* ———— HAMBURGER MENU — FULLY FUNCTIONAL WITH CROSS ———— */
+    .menu-toggle {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 44px;
+      height: 44px;
+      cursor: pointer;
+      z-index: 1002;
+    }
+
+    @media (min-width: 900px) {
+      .menu-toggle {
+        display: none;
+      }
+    }
+
+    .menu-icon {
+      position: relative;
+      width: 24px;
+      height: 24px;
+    }
+
+    .menu-icon span {
+      position: absolute;
+      left: 0;
+      width: 100%;
+      height: 1.5px;
+      background-color: #4A3A32;
+      transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+    }
+
+    .menu-icon span:nth-child(1) {
+      top: 6px;
+    }
+
+    .menu-icon span:nth-child(2) {
+      top: 12px;
+      opacity: 1;
+    }
+
+    .menu-icon span:nth-child(3) {
+      top: 18px;
+    }
+
+    .menu-icon.active span:nth-child(1) {
+      transform: rotate(45deg);
+      top: 12px;
+      background-color: #C6A46C;
+    }
+
+    .menu-icon.active span:nth-child(2) {
+      opacity: 0;
+      transform: translateX(-20px);
+    }
+
+    .menu-icon.active span:nth-child(3) {
+      transform: rotate(-45deg);
+      top: 12px;
+      background-color: #C6A46C;
+    }
+
+    /* ———— MOBILE NAVIGATION OVERLAY ———— */
+    .mobile-nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100vh;
+      background: rgba(248, 246, 243, 0.98);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      z-index: 1001;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 48px;
+      transform: translateX(-100%);
+      transition: transform 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+      padding: 40px;
+    }
+
+    .mobile-nav.active {
+      transform: translateX(0);
+    }
+
+    .mobile-nav a {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 32px;
+      font-weight: 300;
+      color: #4A3A32;
+      text-decoration: none;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.4s ease, transform 0.4s ease, color 0.2s;
+      transition-delay: 0.1s;
+    }
+
+    .mobile-nav.active a {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .mobile-nav a:nth-child(1) { transition-delay: 0.2s; }
+    .mobile-nav a:nth-child(2) { transition-delay: 0.3s; }
+    .mobile-nav a:nth-child(3) { transition-delay: 0.4s; }
+    .mobile-nav a:nth-child(4) { transition-delay: 0.5s; }
+
+    .mobile-nav a:hover {
+      color: #C6A46C;
+    }
+
+    .mobile-nav-close {
+      position: absolute;
+      bottom: 80px;
+      font-size: 11px;
+      letter-spacing: 0.5em;
+      text-transform: uppercase;
+      color: #B7A79A;
+      cursor: pointer;
+      border-bottom: 0.5px solid #C6A46C;
+      padding-bottom: 8px;
+    }
+
+    /* ———— ANNOUNCEMENT MARQUEE — PERFECT ON MOBILE ———— */
+    .marquee-wrapper {
+      width: 100%;
+      background: #F1ECE6;
+      border-top: 0.5px solid rgba(198, 164, 108, 0.2);
+      border-bottom: 0.5px solid rgba(198, 164, 108, 0.2);
+      padding: 12px 0;
+      overflow: hidden;
+      position: relative;
+    }
+
+    @media (min-width: 768px) {
+      .marquee-wrapper {
+        padding: 14px 0;
+      }
+    }
+
+    .marquee-track {
+      display: flex;
+      width: max-content;
+      animation: marqueeSlide 25s linear infinite;
+    }
+
+    .marquee-content {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      padding: 0 12px;
+    }
+
+    @media (min-width: 768px) {
+      .marquee-content {
+        gap: 48px;
+        padding: 0 24px;
+      }
+    }
+
+    .marquee-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      white-space: nowrap;
+    }
+
+    @media (min-width: 768px) {
+      .marquee-item {
+        gap: 12px;
+      }
+    }
+
+    .marquee-icon {
+      width: 20px;
+      height: 20px;
+      background: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 4px;
+      flex-shrink: 0;
+    }
+
+    @media (min-width: 768px) {
+      .marquee-icon {
+        width: 24px;
+        height: 24px;
+        padding: 5px;
+      }
+    }
+
+    .marquee-icon img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+
+    .marquee-text {
+      font-size: 10px;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: #4A3A32;
+      font-weight: 200;
+      white-space: nowrap;
+    }
+
+    @media (min-width: 768px) {
+      .marquee-text {
+        font-size: 11px;
+        letter-spacing: 0.2em;
+      }
+    }
+
+    .marquee-highlight {
+      color: #C6A46C;
+      font-weight: 400;
+      margin-left: 4px;
+    }
+
+    @keyframes marqueeSlide {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+
+    .marquee-wrapper:hover .marquee-track {
+      animation-play-state: paused;
+    }
+
     /* ———— BUTTONS — ULTRA-LUXURY, TWO SOULS ———— */
     .btn-gold {
       background: white;
       border: 0.5px solid #C6A46C;
       color: #4A3A32;
-      font-size: 9px;
+      font-size: 8px;
       letter-spacing: 0.5em;
       text-transform: uppercase;
-      padding: 18px 36px;
+      padding: 14px 28px;
       text-decoration: none;
       display: inline-flex;
       align-items: center;
-      gap: 14px;
+      gap: 12px;
       transition: all 0.3s;
       font-weight: 300;
+    }
+
+    @media (min-width: 768px) {
+      .btn-gold {
+        font-size: 9px;
+        padding: 18px 36px;
+      }
     }
 
     .btn-gold:hover {
@@ -218,93 +544,150 @@
       background: #D8C3B2;
       color: #4A3A32;
       border: none;
-      font-size: 9px;
+      font-size: 8px;
       letter-spacing: 0.5em;
       text-transform: uppercase;
-      padding: 18px 36px;
+      padding: 14px 28px;
       text-decoration: none;
       display: inline-flex;
       align-items: center;
-      gap: 14px;
+      gap: 12px;
       transition: opacity 0.3s;
       font-weight: 300;
+    }
+
+    @media (min-width: 768px) {
+      .btn-beige {
+        font-size: 9px;
+        padding: 18px 36px;
+      }
     }
 
     .btn-beige:hover {
       opacity: 0.75;
     }
 
-    /* ——————————————————————————————————————
-       HERO — SPLIT EDITORIAL · june4.jpg RIGHT
-       Content Left · Image Right · Soft Border
-    —————————————————————————————————————— */
+    /* ———— HERO — SPLIT EDITORIAL · MOBILE OPTIMIZED ———— */
     .hero {
-      height: 100vh;
       position: relative;
       display: flex;
       align-items: center;
+      justify-content: center;
+      min-height: 90vh;
       background-color: #F8F6F3;
       overflow: hidden;
+      padding: 60px 0;
     }
 
     .hero-grid {
       display: grid;
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: 1fr;
       width: 100%;
       max-width: 1600px;
       margin: 0 auto;
-      padding: 0 140px;
+      padding: 0 24px;
       align-items: center;
-      gap: 60px;
+      gap: 40px;
+    }
+
+    @media (min-width: 1000px) {
+      .hero-grid {
+        grid-template-columns: 1fr 1fr;
+        padding: 0 60px;
+        gap: 60px;
+      }
+    }
+
+    @media (min-width: 1200px) {
+      .hero-grid {
+        padding: 0 140px;
+      }
     }
 
     .hero-content {
       max-width: 500px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    @media (min-width: 1000px) {
+      .hero-content {
+        text-align: left;
+        margin: 0;
+      }
     }
 
     .hero-pre {
-      font-size: 10px;
-      letter-spacing: 0.7em;
-      margin-bottom: 24px;
+      font-size: 9px;
+      letter-spacing: 0.6em;
+      margin-bottom: 20px;
       color: #B7A79A;
       font-weight: 200;
     }
 
     .hero-title {
-      font-size: 72px;
+      font-size: 56px;
       font-weight: 300;
       line-height: 0.9;
-      margin-bottom: 24px;
+      margin-bottom: 20px;
       color: #4A3A32;
       letter-spacing: -0.018em;
+    }
+
+    @media (min-width: 768px) {
+      .hero-title {
+        font-size: 64px;
+      }
+    }
+
+    @media (min-width: 1200px) {
+      .hero-title {
+        font-size: 72px;
+      }
     }
 
     .hero-gold {
       font-family: 'Cormorant Garamond', serif;
       font-style: italic;
       color: #C6A46C;
-      font-size: 18px;
-      letter-spacing: 0.22em;
+      font-size: 16px;
+      letter-spacing: 0.2em;
       text-transform: uppercase;
-      margin-bottom: 24px;
+      margin-bottom: 20px;
       font-weight: 300;
     }
 
     .hero-body {
-      font-size: 15px;
+      font-size: 14px;
       color: #6F625A;
       font-weight: 200;
-      margin-bottom: 48px;
+      margin-bottom: 40px;
       max-width: 400px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .hero-buttons {
+      display: flex;
+      gap: 16px;
+      justify-content: center;
+      flex-wrap: wrap;
     }
 
     .hero-image-frame {
-      position: relative;
-      width: 100%;
-      aspect-ratio: 4/5;
-      overflow: hidden;
-      border: 0.5px solid rgba(198, 164, 108, 0.3);
-      box-shadow: 0 20px 40px -20px rgba(0,0,0,0.03);
+      display: none;
+    }
+
+    @media (min-width: 1000px) {
+      .hero-image-frame {
+        display: block;
+        position: relative;
+        width: 100%;
+        aspect-ratio: 4/5;
+        overflow: hidden;
+        border: 0.5px solid rgba(198, 164, 108, 0.3);
+        box-shadow: 0 20px 40px -20px rgba(0,0,0,0.03);
+      }
     }
 
     .hero-image {
@@ -322,10 +705,10 @@
       filter: grayscale(0.15);
     }
 
-    /* ———— TESTAMENT SLIDER — WHY CHOOSE US — DOPE SHOWCASE ———— */
+    /* ———— TESTAMENT SLIDER — WHY CHOOSE US ———— */
     .testament-slider {
-      margin: 60px 0 0;
-      padding-top: 40px;
+      margin: 40px 0 0;
+      padding-top: 32px;
       border-top: 0.5px solid rgba(198, 164, 108, 0.2);
     }
 
@@ -333,12 +716,19 @@
       display: flex;
       flex-direction: column;
       gap: 16px;
+      align-items: center;
+    }
+
+    @media (min-width: 1000px) {
+      .testament-track {
+        align-items: flex-start;
+      }
     }
 
     .testament-item {
       display: flex;
       align-items: baseline;
-      gap: 16px;
+      gap: 12px;
       opacity: 0;
       animation: fadeSlide 1.4s cubic-bezier(0.23, 1, 0.32, 1) forwards;
     }
@@ -372,10 +762,10 @@
       100% { opacity: 1; transform: translateY(0); }
     }
 
-    /* ———— FRAMED IMAGES — NO RANDOM PLACEMENT ———— */
+    /* ———— FRAMED IMAGES — GALLERY ARTIFACTS ———— */
     .image-frame {
       border: 0.5px solid rgba(198, 164, 108, 0.25);
-      padding: 8px;
+      padding: 6px;
       background: white;
       box-shadow: 0 12px 28px -12px rgba(0,0,0,0.02);
     }
@@ -398,13 +788,42 @@
       transform: scale(1.02);
     }
 
-    /* ———— EDITORIAL SPREAD — MUSEUM QUALITY, FRAMED ———— */
+    /* ———— GALLERY INTRODUCTION — FANCY WORDS ———— */
+    .gallery-intro {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .gallery-intro-title {
+      font-size: 32px;
+      font-weight: 300;
+      margin-bottom: 16px;
+      color: #4A3A32;
+    }
+
+    .gallery-intro-text {
+      font-size: 13px;
+      color: #6F625A;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    /* ———— EDITORIAL SPREAD — MUSEUM QUALITY ———— */
     .spread {
       display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 120px;
+      grid-template-columns: 1fr;
+      gap: 60px;
       align-items: center;
-      margin: 180px 0;
+      margin: 100px 0;
+    }
+
+    @media (min-width: 900px) {
+      .spread {
+        grid-template-columns: 1fr 1fr;
+        gap: 80px;
+        margin: 140px 0;
+      }
     }
 
     .spread-image {
@@ -413,7 +832,7 @@
       overflow: hidden;
       box-shadow: 0 20px 40px -20px rgba(0,0,0,0.02);
       border: 0.5px solid rgba(198, 164, 108, 0.25);
-      padding: 8px;
+      padding: 6px;
       background: white;
     }
 
@@ -436,83 +855,143 @@
     }
 
     .spread-text {
-      max-width: 360px;
+      max-width: 500px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    @media (min-width: 900px) {
+      .spread-text {
+        text-align: left;
+        margin: 0;
+        max-width: 360px;
+      }
     }
 
     .spread-title {
-      font-size: 48px;
+      font-size: 38px;
       font-weight: 300;
-      line-height: 0.98;
-      margin: 16px 0 24px;
+      line-height: 1.0;
+      margin: 16px 0 20px;
       color: #4A3A32;
     }
 
     /* ———— SERVICE CARDS — PURE WHITE, FLOATING ———— */
     .service-grid {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 90px;
-      margin-top: 70px;
+      grid-template-columns: 1fr;
+      gap: 30px;
+      margin-top: 50px;
+    }
+
+    @media (min-width: 768px) {
+      .service-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 40px;
+      }
     }
 
     .service-card {
       background: white;
-      padding: 48px 36px;
+      padding: 36px 28px;
       box-shadow: 0 16px 32px -16px rgba(0,0,0,0.02);
       display: flex;
       flex-direction: column;
-      gap: 28px;
+      gap: 20px;
       border: 0.5px solid rgba(198, 164, 108, 0.15);
+      text-align: center;
+      align-items: center;
+    }
+
+    @media (min-width: 768px) {
+      .service-card {
+        text-align: left;
+        align-items: flex-start;
+      }
     }
 
     .service-head {
       display: flex;
+      flex-direction: column;
       align-items: center;
-      gap: 20px;
+      gap: 16px;
+    }
+
+    @media (min-width: 768px) {
+      .service-head {
+        flex-direction: row;
+        align-items: center;
+        gap: 20px;
+      }
     }
 
     .service-card h3 {
-      font-size: 30px;
+      font-size: 26px;
       font-weight: 300;
       line-height: 1.0;
     }
 
-    /* ———— RITUAL BANNER — MONUMENTAL ———— */
+    /* ———— RITUAL BANNER — MONUMENTAL, CENTRALIZED ———— */
     .ritual-banner {
       display: flex;
+      flex-direction: column;
       align-items: center;
-      gap: 56px;
-      padding: 80px 0;
+      gap: 24px;
+      padding: 50px 0;
       border-top: 0.5px solid #D8C3B2;
       border-bottom: 0.5px solid #D8C3B2;
-      margin: 160px 0;
+      margin: 100px 0;
+      text-align: center;
+    }
+
+    @media (min-width: 768px) {
+      .ritual-banner {
+        flex-direction: row;
+        gap: 48px;
+        padding: 70px 0;
+        text-align: left;
+      }
+    }
+
+    .ritual-banner h3 {
+      font-size: 32px;
+      font-weight: 300;
+      margin-bottom: 8px;
+      color: #4A3A32;
     }
 
     /* ———— BOOKING CHAMBER — YOUR THRONE ———— */
     .booking-chamber {
       background: white;
-      padding: 90px 80px;
+      padding: 50px 30px;
       box-shadow: 0 32px 56px -28px rgba(0,0,0,0.02);
-      margin: 180px 0;
+      margin: 100px 0;
       border: 0.5px solid rgba(198, 164, 108, 0.15);
     }
 
     .booking-flex {
       display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 120px;
+      grid-template-columns: 1fr;
+      gap: 60px;
+    }
+
+    @media (min-width: 900px) {
+      .booking-flex {
+        grid-template-columns: 1fr 1fr;
+        gap: 80px;
+      }
     }
 
     .booking-form {
       display: flex;
       flex-direction: column;
-      gap: 32px;
+      gap: 24px;
     }
 
     .form-row {
       display: flex;
       flex-direction: column;
-      gap: 8px;
+      gap: 6px;
     }
 
     .form-label {
@@ -527,7 +1006,7 @@
       border: none;
       border-bottom: 0.5px solid #D8C3B2;
       background: transparent;
-      padding: 12px 0 8px;
+      padding: 10px 0 6px;
       font-size: 14px;
       font-weight: 200;
       outline: none;
@@ -542,15 +1021,21 @@
       background: white;
       border: 0.5px solid #C6A46C;
       color: #4A3A32;
-      font-size: 9px;
-      letter-spacing: 0.55em;
+      font-size: 8px;
+      letter-spacing: 0.5em;
       text-transform: uppercase;
-      padding: 16px 32px;
-      align-self: flex-start;
+      padding: 14px 28px;
+      align-self: center;
       cursor: pointer;
       transition: 0.3s;
       font-weight: 300;
       margin-top: 16px;
+    }
+
+    @media (min-width: 768px) {
+      .btn-booking {
+        align-self: flex-start;
+      }
     }
 
     .btn-booking:hover {
@@ -559,37 +1044,51 @@
     }
 
     .booking-highlight {
-      font-size: 36px;
+      font-size: 30px;
       font-weight: 300;
       font-family: 'Cormorant Garamond', serif;
       line-height: 1.05;
       color: #4A3A32;
-      margin: 24px 0 16px;
+      margin: 20px 0 16px;
     }
 
     /* ———— CONTACT CARD — YOUR SIGNATURE ———— */
     .contact-details {
       background: #F1ECE6;
-      padding: 36px;
-      margin-top: 40px;
+      padding: 28px;
+      margin-top: 30px;
     }
 
     .contact-line {
       display: flex;
       align-items: baseline;
-      gap: 20px;
+      gap: 16px;
       font-size: 13px;
       color: #4A3A32;
       font-weight: 200;
       letter-spacing: 0.06em;
+      justify-content: center;
     }
 
-    /* ———— TRIPTYCH — YOUR THREE MASTERPIECES, FRAMED ———— */
+    @media (min-width: 768px) {
+      .contact-line {
+        justify-content: flex-start;
+      }
+    }
+
+    /* ———— TRIPTYCH — YOUR THREE MASTERPIECES ———— */
     .triptych {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 24px;
-      margin: 70px 0 40px;
+      grid-template-columns: 1fr;
+      gap: 20px;
+      margin: 50px 0 30px;
+    }
+
+    @media (min-width: 600px) {
+      .triptych {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 16px;
+      }
     }
 
     .triptych-item {
@@ -635,14 +1134,60 @@
       opacity: 1;
     }
 
-    /* ———— FOOTER — YOUR LEGACY ———— */
+    /* ———— SOCIAL ICONS — LUXURY FOOTER ———— */
+    .social-icons {
+      display: flex;
+      justify-content: center;
+      gap: 32px;
+      margin: 60px 0 40px;
+    }
+
+    .social-icon {
+      width: 44px;
+      height: 44px;
+      background: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 0.5px solid rgba(198, 164, 108, 0.3);
+      transition: all 0.2s;
+    }
+
+    .social-icon:hover {
+      background: #C6A46C;
+      border-color: #C6A46C;
+    }
+
+    .social-icon:hover img {
+      filter: brightness(0) invert(1);
+    }
+
+    .social-icon img {
+      width: 20px;
+      height: 20px;
+      object-fit: contain;
+      transition: filter 0.2s;
+    }
+
+    /* ———— FOOTER — YOUR LEGACY WITH CREDIT ———— */
     .footer {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 140px;
-      margin-top: 180px;
-      padding: 80px 0 140px;
+      grid-template-columns: 1fr;
+      gap: 40px;
+      margin-top: 80px;
+      padding: 60px 0 40px;
       border-top: 0.5px solid #D8C3B2;
+      text-align: center;
+    }
+
+    @media (min-width: 768px) {
+      .footer {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 80px;
+        padding: 80px 0 60px;
+        text-align: left;
+      }
     }
 
     .footer-col p {
@@ -650,7 +1195,7 @@
       letter-spacing: 0.45em;
       text-transform: uppercase;
       color: #B7A79A;
-      margin-bottom: 28px;
+      margin-bottom: 24px;
     }
 
     .footer-col a {
@@ -659,41 +1204,74 @@
       font-weight: 200;
       color: #6F625A;
       text-decoration: none;
-      margin-bottom: 14px;
+      margin-bottom: 12px;
     }
 
     .footer-col a:hover {
       color: #C6A46C;
     }
 
+    /* ———— CREDIT SECTION — PERFECTLY FITTED AT BOTTOM ———— */
+    .credit-section {
+      width: 100%;
+      padding: 24px 24px 32px;
+      background: #F8F6F3;
+      border-top: 0.5px solid rgba(198, 164, 108, 0.15);
+      text-align: center;
+    }
+
+    .credit-text {
+      font-size: 9px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: #B7A79A;
+      font-weight: 200;
+    }
+
+    .credit-highlight {
+      color: #C6A46C;
+      font-weight: 300;
+      font-style: italic;
+    }
+
     /* ———— POPUP — DISCREET, FUNCTIONAL ———— */
     .popup {
       position: fixed;
-      bottom: 40px;
-      right: 40px;
-      width: 360px;
+      bottom: 20px;
+      right: 20px;
+      left: 20px;
+      width: auto;
       background: white;
       box-shadow: 0 32px 56px -28px rgba(0,0,0,0.03);
-      padding: 36px 32px;
+      padding: 28px 24px;
       z-index: 1200;
       border: 0.5px solid rgba(198,164,108,0.2);
+    }
+
+    @media (min-width: 600px) {
+      .popup {
+        left: auto;
+        right: 40px;
+        width: 360px;
+        padding: 36px 32px;
+      }
     }
 
     .popup-header {
       display: flex;
       justify-content: space-between;
-      margin-bottom: 24px;
+      margin-bottom: 20px;
     }
 
     .popup-title {
-      font-size: 26px;
+      font-size: 24px;
       font-weight: 300;
       color: #4A3A32;
     }
 
     .popup-close {
-      width: 44px;
-      height: 44px;
+      width: 40px;
+      height: 40px;
       background: white;
       border-radius: 50%;
       display: flex;
@@ -712,10 +1290,10 @@
       width: 100%;
       border: none;
       border-bottom: 0.5px solid #D8C3B2;
-      padding: 14px 0 8px;
+      padding: 12px 0 6px;
       font-size: 13px;
       background: transparent;
-      margin-bottom: 32px;
+      margin-bottom: 28px;
       outline: none;
     }
 
@@ -726,7 +1304,7 @@
       font-size: 8px;
       letter-spacing: 0.45em;
       text-transform: uppercase;
-      padding: 14px 28px;
+      padding: 12px 24px;
       cursor: pointer;
       transition: 0.2s;
     }
@@ -740,54 +1318,54 @@
       display: none !important;
     }
 
-    /* ———— SLOW, SENSUAL, DIRECTIONAL — 1.3s DURATION ———— */
+    /* ———— SLOW, SENSUAL, DIRECTIONAL — 1.6s DURATION ———— */
     @keyframes slideLeft {
-      0% { opacity: 0; transform: translateX(24px); }
+      0% { opacity: 0; transform: translateX(32px); }
       100% { opacity: 1; transform: translateX(0); }
     }
 
     @keyframes slideRight {
-      0% { opacity: 0; transform: translateX(-24px); }
+      0% { opacity: 0; transform: translateX(-32px); }
       100% { opacity: 1; transform: translateX(0); }
     }
 
     @keyframes slideUp {
-      0% { opacity: 0; transform: translateY(24px); }
+      0% { opacity: 0; transform: translateY(32px); }
       100% { opacity: 1; transform: translateY(0); }
     }
 
     .slide-left {
-      animation: slideLeft 1.3s cubic-bezier(0.23, 1, 0.32, 1) forwards;
+      animation: slideLeft 1.6s cubic-bezier(0.23, 1, 0.32, 1) forwards;
     }
 
     .slide-right {
-      animation: slideRight 1.3s cubic-bezier(0.23, 1, 0.32, 1) forwards;
+      animation: slideRight 1.6s cubic-bezier(0.23, 1, 0.32, 1) forwards;
     }
 
     .slide-up {
-      animation: slideUp 1.3s cubic-bezier(0.23, 1, 0.32, 1) forwards;
+      animation: slideUp 1.6s cubic-bezier(0.23, 1, 0.32, 1) forwards;
     }
 
-    .delay-1 { animation-delay: 0.15s; opacity: 0; }
-    .delay-2 { animation-delay: 0.3s; opacity: 0; }
-    .delay-3 { animation-delay: 0.45s; opacity: 0; }
-    .delay-4 { animation-delay: 0.6s; opacity: 0; }
-    .delay-5 { animation-delay: 0.75s; opacity: 0; }
-    .delay-6 { animation-delay: 0.9s; opacity: 0; }
-
-    @media (max-width: 1000px) {
-      .container { padding: 0 40px; }
-      .sticky-header { padding: 20px 40px; }
-      .hero-grid { grid-template-columns: 1fr; padding: 0 40px; }
-      .service-grid, .spread, .booking-flex, .triptych, .footer { grid-template-columns: 1fr; }
-      .nav-links { display: none; }
-      .hero-title { font-size: 56px; }
-    }
+    .delay-1 { animation-delay: 0.2s; opacity: 0; }
+    .delay-2 { animation-delay: 0.4s; opacity: 0; }
+    .delay-3 { animation-delay: 0.6s; opacity: 0; }
+    .delay-4 { animation-delay: 0.8s; opacity: 0; }
+    .delay-5 { animation-delay: 1.0s; opacity: 0; }
+    .delay-6 { animation-delay: 1.2s; opacity: 0; }
   </style>
 </head>
 <body>
 
-  <!-- HEADER — CROWN OF SILENCE -->
+  <!-- MOBILE NAVIGATION OVERLAY -->
+  <div class="mobile-nav" id="mobileNav">
+    <a href="#">Atelier</a>
+    <a href="#">Services</a>
+    <a href="#">Book</a>
+    <a href="#">Journal</a>
+    <span class="mobile-nav-close" id="closeNavBtn">CLOSE</span>
+  </div>
+
+  <!-- HEADER — WITH FUNCTIONAL HAMBURGER MENU -->
   <header class="sticky-header slide-up">
     <div class="logo-group">
       <div class="orb orb-sm">
@@ -800,23 +1378,74 @@
       <a href="#">Services</a>
       <a href="#">Book</a>
     </nav>
-    <div style="width:44px;"></div>
+    <div class="menu-toggle" id="menuToggle">
+      <div class="menu-icon" id="menuIcon">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
   </header>
 
-  <!-- HERO — SPLIT EDITORIAL · june4.jpg RIGHT · CONTENT LEFT · FRAMED -->
+  <!-- ANNOUNCEMENT MARQUEE — PERFECT ON MOBILE, INFINITE SLIDE -->
+  <div class="marquee-wrapper">
+    <div class="marquee-track">
+      <div class="marquee-content">
+        <div class="marquee-item">
+          <span class="marquee-icon">
+            <img src="icons/icon-crown.gif" alt="✨" onerror="this.style.display='none';this.parentElement.innerHTML='✨';">
+          </span>
+          <span class="marquee-text">SPRING RESERVE · <span class="marquee-highlight">20% OFF</span> FIRST INSTALL</span>
+        </div>
+        <div class="marquee-item">
+          <span class="marquee-icon">
+            <img src="icons/icon-drop.gif" alt="💧" onerror="this.style.display='none';this.parentElement.innerHTML='💧';">
+          </span>
+          <span class="marquee-text">COMPLIMENTARY SILK TREATMENT · <span class="marquee-highlight">BOOK BY APRIL 30</span></span>
+        </div>
+        <div class="marquee-item">
+          <span class="marquee-icon">
+            <img src="icons/icon-calendar.gif" alt="📅" onerror="this.style.display='none';this.parentElement.innerHTML='📅';">
+          </span>
+          <span class="marquee-text">NEW CLIENTS · <span class="marquee-highlight">LACE CONSULTATION INCLUDED</span></span>
+        </div>
+      </div>
+      <div class="marquee-content">
+        <div class="marquee-item">
+          <span class="marquee-icon">
+            <img src="icons/icon-crown.gif" alt="✨" onerror="this.style.display='none';this.parentElement.innerHTML='✨';">
+          </span>
+          <span class="marquee-text">SPRING RESERVE · <span class="marquee-highlight">20% OFF</span> FIRST INSTALL</span>
+        </div>
+        <div class="marquee-item">
+          <span class="marquee-icon">
+            <img src="icons/icon-drop.gif" alt="💧" onerror="this.style.display='none';this.parentElement.innerHTML='💧';">
+          </span>
+          <span class="marquee-text">COMPLIMENTARY SILK TREATMENT · <span class="marquee-highlight">BOOK BY APRIL 30</span></span>
+        </div>
+        <div class="marquee-item">
+          <span class="marquee-icon">
+            <img src="icons/icon-calendar.gif" alt="📅" onerror="this.style.display='none';this.parentElement.innerHTML='📅';">
+          </span>
+          <span class="marquee-text">NEW CLIENTS · <span class="marquee-highlight">LACE CONSULTATION INCLUDED</span></span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- HERO — SPLIT EDITORIAL · june4.jpg RIGHT ON DESKTOP -->
   <section class="hero">
     <div class="hero-grid">
-      <!-- LEFT: CONTENT + TESTAMENT SLIDER -->
       <div class="hero-content">
         <span class="hero-pre micro-caps slide-right delay-1">Private lace atelier</span>
         <h1 class="hero-title slide-left delay-2">The Undone<br>Knot</h1>
         <div class="hero-gold slide-right delay-3">Lifestyle</div>
         <p class="hero-body slide-left delay-3">Custom lace blending · Silent suites · By appointment</p>
-        <div class="hero-buttons slide-up delay-4" style="display: flex; gap: 20px;">
+        <div class="hero-buttons slide-up delay-4">
           <a href="#booking" class="btn-gold">
             <span>BOOK NOW</span>
-            <span style="display:flex; background:white; border-radius:50%; padding:4px; width:26px; height:26px; align-items:center; justify-content:center;">
-              <img src="icons/icon-arrow.gif" alt="→" style="width:11px;" onerror="this.style.display='none';this.parentElement.innerHTML='→';">
+            <span style="display:flex; background:white; border-radius:50%; padding:4px; width:24px; height:24px; align-items:center; justify-content:center;">
+              <img src="icons/icon-arrow.gif" alt="→" style="width:10px;" onerror="this.style.display='none';this.parentElement.innerHTML='→';">
             </span>
           </a>
           <a href="#" class="btn-beige">
@@ -824,7 +1453,7 @@
           </a>
         </div>
         
-        <!-- TESTAMENT SLIDER — WHY CHOOSE US — DOPE SHOWCASE -->
+        <!-- TESTAMENT SLIDER — WHY CHOOSE US -->
         <div class="testament-slider">
           <div class="testament-track">
             <div class="testament-item">
@@ -847,19 +1476,24 @@
         </div>
       </div>
       
-      <!-- RIGHT: FRAMED IMAGE — june4.jpg -->
       <div class="hero-image-frame slide-left delay-2">
         <div class="hero-image"></div>
       </div>
     </div>
   </section>
 
-  <!-- GOLD DIVIDER — THE FIRST WHISPER -->
+  <!-- GALLERY INTRODUCTION — FANCY WORDS -->
   <div class="container">
-    <div class="divider-gold slide-up"></div>
+    <div class="gallery-intro slide-up delay-1">
+      <h2 class="gallery-intro-title serif-luxe">The Lace Archive</h2>
+      <div class="divider-gold"></div>
+      <p class="gallery-intro-text micro-body max-width-md mx-auto">
+        Each piece is a study in patience. Below, a selection of our most recent installations — frontal melts, bespoke finishes, and the quiet precision of invisible lace.
+      </p>
+    </div>
   </div>
 
-  <!-- SPREAD — june2.jpg · FRAMED · EDITORIAL MAJESTY -->
+  <!-- SPREAD — june2.jpg · WITH SERVICE STORYTELLING -->
   <div class="container">
     <div class="spread">
       <div class="spread-image slide-left delay-1">
@@ -870,26 +1504,24 @@
       <div class="spread-text slide-right delay-2">
         <span class="gold-italics">The signature</span>
         <h2 class="spread-title">Frontal melt.<br>Invisible lace.</h2>
-        <div style="width:60px; height:0.5px; background:#C6A46C; margin:28px 0;"></div>
-        <p class="micro-body" style="max-width:340px;">
-          Each application is a private study. No detail overlooked. 
-          Lace blended by hand, under natural light.
+        <div style="width:60px; height:0.5px; background:#C6A46C; margin:24px auto 24px;"></div>
+        <p class="micro-body" style="max-width:400px; margin:0 auto;">
+          Our signature service. We begin with a private consultation, selecting the perfect lace density and tone. The frontal is hand-cut, melted into the hairline with surgical precision. The result is undetectable — even under natural light. Each installation takes 2.5 hours and includes a 7-day follow-up.
         </p>
-        <span class="micro-legal" style="display:block; margin-top:32px;">02 — frontal series</span>
+        <span class="micro-legal" style="display:block; margin-top:28px;">02 — frontal series · 2.5h</span>
       </div>
     </div>
   </div>
 
-  <!-- SERVICES — THREE PILLARS OF EXCELLENCE, FRAMED CARDS -->
+  <!-- SERVICES — THREE PILLARS OF EXCELLENCE -->
   <div class="container section-sm">
-    <div style="display:flex; justify-content:space-between; align-items:baseline;">
+    <div style="display:flex; justify-content:space-between; align-items:baseline; flex-wrap:wrap; gap:16px;">
       <span class="micro-caps slide-right">Signature services</span>
       <span class="gold-italics" style="font-size:10px;">03</span>
     </div>
-    <div class="divider-gold" style="margin:28px 0 64px;"></div>
+    <div class="divider-gold" style="margin:24px auto 48px;"></div>
 
     <div class="service-grid">
-      <!-- Virgin Install -->
       <div class="service-card slide-up delay-1">
         <div class="service-head">
           <div class="orb">
@@ -897,13 +1529,12 @@
           </div>
           <h3>Virgin<br>Install</h3>
         </div>
-        <p class="micro-body" style="font-size:11px;">Ethically sourced, single donor. Custom color, lace cutting, invisible blend. 2.5h.</p>
+        <p class="micro-body" style="font-size:12px;">Ethically sourced, single donor. Custom color, lace cutting, invisible blend. 2.5h.</p>
         <span class="micro-legal">By appointment</span>
-        <div style="margin-top:12px;">
-          <a href="#" class="btn-gold" style="padding:12px 24px; font-size:8px;">LEARN MORE</a>
+        <div style="margin-top:8px;">
+          <a href="#" class="btn-gold" style="padding:10px 20px; font-size:8px;">LEARN MORE</a>
         </div>
       </div>
-      <!-- Wig Finishing -->
       <div class="service-card slide-up delay-2">
         <div class="service-head">
           <div class="orb">
@@ -911,17 +1542,16 @@
           </div>
           <h3>Wig<br>Finishing</h3>
         </div>
-        <p class="micro-body" style="font-size:11px;">Frontal melt, closure flattening, full lace ventilation. Relacing & customization.</p>
-        <div style="display:flex; gap:24px;">
+        <p class="micro-body" style="font-size:12px;">Frontal melt, closure flattening, full lace ventilation. Relacing & customization.</p>
+        <div style="display:flex; gap:20px; flex-wrap:wrap; justify-content:center;">
           <span class="micro-legal">Frontal</span>
           <span class="micro-legal">Closure</span>
           <span class="micro-legal">Full lace</span>
         </div>
-        <div style="margin-top:12px;">
-          <a href="#" class="btn-gold" style="padding:12px 24px; font-size:8px;">LEARN MORE</a>
+        <div style="margin-top:8px;">
+          <a href="#" class="btn-gold" style="padding:10px 20px; font-size:8px;">LEARN MORE</a>
         </div>
       </div>
-      <!-- Fitting Services -->
       <div class="service-card slide-up delay-3">
         <div class="service-head">
           <div style="display:flex; gap:12px;">
@@ -932,15 +1562,15 @@
               <img src="icons/icon-scissors.gif" alt="custom" onerror="this.style.display='none';this.parentElement.innerHTML='✂️';">
             </div>
           </div>
-          <h3 style="font-size:28px;">Fitting<br>Services</h3>
+          <h3 style="font-size:26px;">Fitting<br>Services</h3>
         </div>
-        <p class="micro-body" style="font-size:11px;">Ready-to-wear express fitting or bespoke consultation. Private suite.</p>
-        <div style="display:flex; gap:40px;">
-          <div><span class="micro-legal">Ready</span><br><span style="font-size:11px; color:#6F625A;">3 day</span></div>
-          <div><span class="micro-legal">Bespoke</span><br><span style="font-size:11px; color:#6F625A;">4–6 wk</span></div>
+        <p class="micro-body" style="font-size:12px;">Ready-to-wear express fitting or bespoke consultation. Private suite.</p>
+        <div style="display:flex; gap:30px; flex-wrap:wrap; justify-content:center;">
+          <div><span class="micro-legal">Ready</span><br><span style="font-size:12px; color:#6F625A;">3 day</span></div>
+          <div><span class="micro-legal">Bespoke</span><br><span style="font-size:12px; color:#6F625A;">4–6 wk</span></div>
         </div>
-        <div style="margin-top:12px;">
-          <a href="#" class="btn-gold" style="padding:12px 24px; font-size:8px;">LEARN MORE</a>
+        <div style="margin-top:8px;">
+          <a href="#" class="btn-gold" style="padding:10px 20px; font-size:8px;">LEARN MORE</a>
         </div>
       </div>
     </div>
@@ -953,21 +1583,20 @@
         <img src="icons/icon-drop.gif" alt="ritual" onerror="this.style.display='none';this.parentElement.innerHTML='💧';">
       </div>
       <div>
-        <h3 style="font-size:38px; font-weight:300; margin-bottom:8px; color:#4A3A32;">Hair rituals</h3>
+        <h3>Hair rituals</h3>
         <span class="micro-legal" style="font-size:9px;">Silk press · Steam treatment · Satin finish</span>
       </div>
-      <a href="#" class="btn-gold" style="margin-left:auto; padding:14px 32px;">BOOK RITUAL</a>
+      <a href="#" class="btn-gold" style="margin-left:0; padding:12px 28px;">BOOK RITUAL</a>
     </div>
   </div>
 
-  <!-- BOOKING CHAMBER — YOUR CONTACT, YOUR THRONE, FRAMED -->
+  <!-- BOOKING CHAMBER — YOUR CONTACT, YOUR THRONE -->
   <div id="booking" class="container">
     <div class="booking-chamber slide-up">
       <div class="booking-flex">
-        <!-- LEFT: FORM -->
         <div>
-          <span class="micro-caps" style="margin-bottom:20px;">Secure your session</span>
-          <h3 style="font-size:42px; font-weight:300; margin-bottom:32px; color:#4A3A32;">Request an<br>appointment</h3>
+          <span class="micro-caps" style="margin-bottom:16px; text-align:center;">Secure your session</span>
+          <h3 style="font-size:36px; font-weight:300; margin-bottom:28px; color:#4A3A32; text-align:center;">Request an<br>appointment</h3>
           <div class="booking-form">
             <div class="form-row">
               <span class="form-label">Full name</span>
@@ -991,23 +1620,22 @@
               </select>
             </div>
             <button class="btn-booking" id="bookingButton">Confirm booking</button>
-            <span id="bookingFeedback" style="font-size:8px; color:#C6A46C; margin-top:8px; display:none;">✓ Request sent — we will reply within 24h.</span>
+            <span id="bookingFeedback" style="font-size:8px; color:#C6A46C; margin-top:8px; display:none; text-align:center;">✓ Request sent — we will reply within 24h.</span>
           </div>
         </div>
-        <!-- RIGHT: YOUR IDENTITY — PHONE, EMAIL, ICON -->
-        <div style="display:flex; flex-direction:column; gap:28px;">
+        <div style="display:flex; flex-direction:column; gap:24px; align-items:center; text-align:center;">
           <div class="orb orb-lg">
             <img src="icons/icon-calendar.gif" alt="calendar" onerror="this.style.display='none';this.parentElement.innerHTML='📅';">
           </div>
           <div class="booking-highlight">
             Private suites.<br>No walk-ins.<br>Lace blending.
           </div>
-          <div class="contact-details">
+          <div class="contact-details" style="width:100%;">
             <div class="contact-line">
               <span class="gold-italics" style="font-size:9px;">call</span>
               <span style="font-size:14px; letter-spacing:0.1em;">060683234242</span>
             </div>
-            <div class="contact-line" style="margin-top:18px;">
+            <div class="contact-line" style="margin-top:16px;">
               <span class="gold-italics" style="font-size:9px;">email</span>
               <span style="font-size:14px; letter-spacing:0.05em;">junelace@gmail.com</span>
             </div>
@@ -1018,9 +1646,9 @@
     </div>
   </div>
 
-  <!-- TRIPTYCH — YOUR THREE MASTERPIECES: june5.jpg, june6.jpg, june1.jpg · FRAMED -->
-  <div class="container" style="margin-bottom:160px;">
-    <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:32px;">
+  <!-- TRIPTYCH — YOUR THREE MASTERPIECES: june5.jpg, june6.jpg, june1.jpg -->
+  <div class="container" style="margin-bottom:100px;">
+    <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:28px; flex-wrap:wrap; gap:16px;">
       <span class="micro-caps slide-right">Laced by june</span>
       <span class="gold-italics">@junelaced</span>
     </div>
@@ -1052,6 +1680,21 @@
     </div>
   </div>
 
+  <!-- SOCIAL ICONS — LUXURY FOOTER ASSET -->
+  <div class="container">
+    <div class="social-icons">
+      <a href="#" class="social-icon">
+        <img src="icons/icon-instagram.gif" alt="instagram" onerror="this.style.display='none';this.parentElement.innerHTML='📷';">
+      </a>
+      <a href="#" class="social-icon">
+        <img src="icons/icon-close.gif" alt="x" style="width:18px;" onerror="this.style.display='none';this.parentElement.innerHTML='𝕏';">
+      </a>
+      <a href="#" class="social-icon">
+        <img src="icons/icon-arrow.gif" alt="pinterest" style="transform: rotate(90deg);" onerror="this.style.display='none';this.parentElement.innerHTML='📌';">
+      </a>
+    </div>
+  </div>
+
   <!-- FOOTER — YOUR SIGNATURE -->
   <div class="container footer">
     <div class="footer-col">
@@ -1070,11 +1713,16 @@
       <p>Client care</p>
       <a href="#">Consultation guide</a>
       <a href="#">Preparation</a>
-      <div style="margin-top:32px;">
+      <div style="margin-top:24px;">
         <span class="micro-legal">Receive lookbook</span>
         <input type="email" placeholder="Email" class="form-input" style="margin-top:8px; width:100%;">
       </div>
     </div>
+  </div>
+
+  <!-- CREDIT SECTION — MONARCH TECHNOLOGIES PTY LTD -->
+  <div class="credit-section">
+    <span class="credit-text">this website was done by <span class="credit-highlight">monarch technologies pty ltd</span></span>
   </div>
 
   <!-- POPUP — DISCREET, FUNCTIONAL -->
@@ -1082,7 +1730,7 @@
     <div class="popup-header">
       <h3 class="popup-title">Unlace the discount.</h3>
       <div class="popup-close" id="closePopupBtn">
-        <img src="icons/icon-close.gif" alt="close" style="width:18px; height:18px;" onerror="this.style.display='none';this.parentElement.innerHTML='✕';">
+        <img src="icons/icon-close.gif" alt="close" style="width:16px; height:16px;" onerror="this.style.display='none';this.parentElement.innerHTML='✕';">
       </div>
     </div>
     <p class="micro-body" style="margin-bottom:24px; font-size:12px;">5% off your first installation. No spam, only silk.</p>
@@ -1093,16 +1741,51 @@
   </div>
 
   <!-- ICON DIRECTORY — YOUR NAMING, YOUR SYSTEM -->
-  <div style="padding:20px 140px; font-size:6px; color:#B7A79A; border-top:0.5px solid #D8C3B2; display:flex; gap:28px; flex-wrap:wrap; letter-spacing:0.12em;">
+  <div style="padding:20px 24px; font-size:6px; color:#B7A79A; border-top:0.5px solid #D8C3B2; display:flex; gap:20px; flex-wrap:wrap; letter-spacing:0.12em; justify-content:center;">
     <span>📁 /icons — white orb vessels</span>
     <span>icon-crown.gif</span> <span>icon-scissors.gif</span> <span>icon-tape.gif</span> <span>icon-mannequin.gif</span> 
     <span>icon-drop.gif</span> <span>icon-calendar.gif</span> <span>icon-lock.gif</span> <span>icon-instagram.gif</span> 
     <span>icon-close.gif</span> <span>icon-arrow.gif</span>
   </div>
 
-  <!-- PURE JS — FLATPICKR, POPUP, BOOKING, SUBSCRIBE -->
+  <!-- PURE JS — MENU TOGGLE, FLATPICKR, POPUP, BOOKING -->
   <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
   <script>
+    // HAMBURGER MENU — FULLY FUNCTIONAL WITH CROSS
+    const menuToggle = document.getElementById('menuToggle');
+    const menuIcon = document.getElementById('menuIcon');
+    const mobileNav = document.getElementById('mobileNav');
+    const closeNavBtn = document.getElementById('closeNavBtn');
+    const body = document.body;
+
+    function openMenu() {
+      menuIcon.classList.add('active');
+      mobileNav.classList.add('active');
+      body.classList.add('menu-open');
+    }
+
+    function closeMenu() {
+      menuIcon.classList.remove('active');
+      mobileNav.classList.remove('active');
+      body.classList.remove('menu-open');
+    }
+
+    menuToggle.addEventListener('click', function() {
+      if (menuIcon.classList.contains('active')) {
+        closeMenu();
+      } else {
+        openMenu();
+      }
+    });
+
+    closeNavBtn.addEventListener('click', closeMenu);
+
+    // Close menu when clicking on a link
+    const mobileNavLinks = mobileNav.querySelectorAll('a');
+    mobileNavLinks.forEach(link => {
+      link.addEventListener('click', closeMenu);
+    });
+
     // FLATPICKR — DATE PICKER
     flatpickr("#datePicker", {
       minDate: "today",
@@ -1137,10 +1820,10 @@
     window.addEventListener('scroll', function(){
       const header = document.querySelector('.sticky-header');
       if(window.scrollY > 20) {
-        header.style.background = 'rgba(248, 246, 243, 0.85)';
-        header.style.boxShadow = '0 4px 24px rgba(0,0,0,0.01)';
+        header.style.background = 'rgba(248, 246, 243, 0.92)';
+        header.style.boxShadow = '0 4px 20px rgba(0,0,0,0.01)';
       } else {
-        header.style.background = 'rgba(248, 246, 243, 0.72)';
+        header.style.background = 'rgba(248, 246, 243, 0.85)';
         header.style.boxShadow = 'none';
       }
     });
