@@ -1,0 +1,1149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+  <title>June Laced — the private atelier</title>
+  <!-- Absolute silence. Absolute luxury. -->
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Inter:wght@200;300;400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+  <style>
+    /* ————————————————————————————————————————————————————————————————————
+       THE PINNACLE OF LUXURY · BEYOND COMPETITION · YOUR IDENTITY
+       Soft White:   #F8F6F3 – 70% dominance
+       Warm Ivory:   #F1ECE6 – 20% sections
+       Nude Beige:   #D8C3B2 – 10% accents
+       Soft Taupe:   #B7A79A – micro typography
+       Champagne Gold: #C6A46C – the signature
+       Deep Cocoa:   #4A3A32 – monumental headlines
+       Muted Taupe:  #6F625A – whisper body text
+    ———————————————————————————————————————————————————————————————————— */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: #F8F6F3;
+      color: #4A3A32;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      font-weight: 200;
+      font-size: 13px;
+      line-height: 1.85;
+      letter-spacing: 0.01em;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+
+    h1, h2, h3, h4, .serif-luxe {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-weight: 300;
+      letter-spacing: -0.015em;
+      color: #4A3A32;
+    }
+
+    /* ———— MICRO TYPOGRAPHY — ALMOST INAUDIBLE ———— */
+    .gold-italics {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      color: #C6A46C;
+      letter-spacing: 0.14em;
+      font-size: 11px;
+      font-weight: 400;
+      text-transform: uppercase;
+    }
+
+    .micro-caps {
+      font-size: 8px;
+      font-weight: 200;
+      letter-spacing: 0.55em;
+      text-transform: uppercase;
+      color: #B7A79A;
+      font-family: 'Inter', sans-serif;
+      display: block;
+    }
+
+    .micro-body {
+      font-size: 12px;
+      color: #6F625A;
+      font-weight: 200;
+      line-height: 1.9;
+    }
+
+    .micro-legal {
+      font-size: 8px;
+      letter-spacing: 0.24em;
+      text-transform: uppercase;
+      color: #B7A79A;
+      font-weight: 200;
+    }
+
+    /* ———— MONUMENTAL WHITE SPACE — 140px PADDING, 180px MARGINS ———— */
+    .container {
+      max-width: 1300px;
+      margin: 0 auto;
+      padding: 0 140px;
+    }
+
+    @media (max-width: 1100px) {
+      .container { padding: 0 60px; }
+    }
+
+    .section {
+      margin: 180px 0;
+    }
+
+    .section-sm {
+      margin: 140px 0;
+    }
+
+    /* ———— GOLD DIVIDERS — SUBTLE, UNMISTAKABLE ———— */
+    .divider-gold {
+      width: 80px;
+      height: 0.5px;
+      background: #C6A46C;
+      margin: 40px 0 56px;
+      opacity: 0.6;
+    }
+
+    /* ———— ICON ORBS — PURE WHITE, FLOATING ———— */
+    .orb {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 52px;
+      height: 52px;
+      background: white;
+      border-radius: 50%;
+      box-shadow: 0 16px 32px -14px rgba(0,0,0,0.02);
+      padding: 14px;
+      flex-shrink: 0;
+    }
+
+    .orb-sm {
+      width: 42px;
+      height: 42px;
+      padding: 11px;
+    }
+
+    .orb-lg {
+      width: 72px;
+      height: 72px;
+      padding: 18px;
+    }
+
+    .orb img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      display: block;
+    }
+
+    /* ———— STICKY HEADER — ALMOST IMMATERIAL ———— */
+    .sticky-header {
+      position: sticky;
+      top: 0;
+      width: 100%;
+      background: rgba(248, 246, 243, 0.72);
+      backdrop-filter: blur(28px);
+      -webkit-backdrop-filter: blur(28px);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 140px;
+      z-index: 1000;
+      border-bottom: 0.5px solid rgba(198, 164, 108, 0.08);
+    }
+
+    .logo-group {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .logo-text {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 19px;
+      letter-spacing: 4.5px;
+      font-weight: 300;
+      color: #4A3A32;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 64px;
+    }
+
+    .nav-links a {
+      font-size: 9px;
+      letter-spacing: 0.5em;
+      text-transform: uppercase;
+      color: #4A3A32;
+      text-decoration: none;
+      font-weight: 200;
+      padding-bottom: 6px;
+      border-bottom: 0.5px solid transparent;
+      transition: border-color 0.3s;
+    }
+
+    .nav-links a:hover {
+      border-bottom-color: #C6A46C;
+    }
+
+    /* ———— BUTTONS — ULTRA-LUXURY, TWO SOULS ———— */
+    .btn-gold {
+      background: white;
+      border: 0.5px solid #C6A46C;
+      color: #4A3A32;
+      font-size: 9px;
+      letter-spacing: 0.5em;
+      text-transform: uppercase;
+      padding: 18px 36px;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 14px;
+      transition: all 0.3s;
+      font-weight: 300;
+    }
+
+    .btn-gold:hover {
+      background: #C6A46C;
+      color: white;
+      border-color: #C6A46C;
+    }
+
+    .btn-beige {
+      background: #D8C3B2;
+      color: #4A3A32;
+      border: none;
+      font-size: 9px;
+      letter-spacing: 0.5em;
+      text-transform: uppercase;
+      padding: 18px 36px;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 14px;
+      transition: opacity 0.3s;
+      font-weight: 300;
+    }
+
+    .btn-beige:hover {
+      opacity: 0.75;
+    }
+
+    /* ——————————————————————————————————————
+       HERO — SPLIT EDITORIAL · june4.jpg RIGHT
+       Content Left · Image Right · Soft Border
+    —————————————————————————————————————— */
+    .hero {
+      height: 100vh;
+      position: relative;
+      display: flex;
+      align-items: center;
+      background-color: #F8F6F3;
+      overflow: hidden;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      width: 100%;
+      max-width: 1600px;
+      margin: 0 auto;
+      padding: 0 140px;
+      align-items: center;
+      gap: 60px;
+    }
+
+    .hero-content {
+      max-width: 500px;
+    }
+
+    .hero-pre {
+      font-size: 10px;
+      letter-spacing: 0.7em;
+      margin-bottom: 24px;
+      color: #B7A79A;
+      font-weight: 200;
+    }
+
+    .hero-title {
+      font-size: 72px;
+      font-weight: 300;
+      line-height: 0.9;
+      margin-bottom: 24px;
+      color: #4A3A32;
+      letter-spacing: -0.018em;
+    }
+
+    .hero-gold {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      color: #C6A46C;
+      font-size: 18px;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      margin-bottom: 24px;
+      font-weight: 300;
+    }
+
+    .hero-body {
+      font-size: 15px;
+      color: #6F625A;
+      font-weight: 200;
+      margin-bottom: 48px;
+      max-width: 400px;
+    }
+
+    .hero-image-frame {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 4/5;
+      overflow: hidden;
+      border: 0.5px solid rgba(198, 164, 108, 0.3);
+      box-shadow: 0 20px 40px -20px rgba(0,0,0,0.03);
+    }
+
+    .hero-image {
+      width: 100%;
+      height: 100%;
+      background-image: url('images/june4.jpg');
+      background-size: cover;
+      background-position: center 45%;
+      filter: grayscale(0.25) contrast(0.98);
+      transition: transform 8s cubic-bezier(0.23, 1, 0.32, 1), filter 1.5s;
+    }
+
+    .hero-image-frame:hover .hero-image {
+      transform: scale(1.02);
+      filter: grayscale(0.15);
+    }
+
+    /* ———— TESTAMENT SLIDER — WHY CHOOSE US — DOPE SHOWCASE ———— */
+    .testament-slider {
+      margin: 60px 0 0;
+      padding-top: 40px;
+      border-top: 0.5px solid rgba(198, 164, 108, 0.2);
+    }
+
+    .testament-track {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .testament-item {
+      display: flex;
+      align-items: baseline;
+      gap: 16px;
+      opacity: 0;
+      animation: fadeSlide 1.4s cubic-bezier(0.23, 1, 0.32, 1) forwards;
+    }
+
+    .testament-item:nth-child(1) { animation-delay: 0.8s; }
+    .testament-item:nth-child(2) { animation-delay: 1.2s; }
+    .testament-item:nth-child(3) { animation-delay: 1.6s; }
+    .testament-item:nth-child(4) { animation-delay: 2.0s; }
+
+    .testament-icon {
+      font-size: 14px;
+      color: #C6A46C;
+      font-weight: 200;
+    }
+
+    .testament-text {
+      font-size: 13px;
+      color: #4A3A32;
+      font-weight: 200;
+      letter-spacing: 0.03em;
+    }
+
+    .testament-highlight {
+      color: #C6A46C;
+      font-weight: 300;
+      font-style: italic;
+    }
+
+    @keyframes fadeSlide {
+      0% { opacity: 0; transform: translateY(12px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+
+    /* ———— FRAMED IMAGES — NO RANDOM PLACEMENT ———— */
+    .image-frame {
+      border: 0.5px solid rgba(198, 164, 108, 0.25);
+      padding: 8px;
+      background: white;
+      box-shadow: 0 12px 28px -12px rgba(0,0,0,0.02);
+    }
+
+    .image-frame-inner {
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+    }
+
+    .image-frame-inner img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      filter: grayscale(0.25);
+      transition: transform 1.2s cubic-bezier(0.23, 1, 0.32, 1);
+    }
+
+    .image-frame-inner:hover img {
+      transform: scale(1.02);
+    }
+
+    /* ———— EDITORIAL SPREAD — MUSEUM QUALITY, FRAMED ———— */
+    .spread {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 120px;
+      align-items: center;
+      margin: 180px 0;
+    }
+
+    .spread-image {
+      background: #F1ECE6;
+      aspect-ratio: 4/5;
+      overflow: hidden;
+      box-shadow: 0 20px 40px -20px rgba(0,0,0,0.02);
+      border: 0.5px solid rgba(198, 164, 108, 0.25);
+      padding: 8px;
+      background: white;
+    }
+
+    .spread-image-inner {
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+    }
+
+    .spread-image-inner img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      filter: grayscale(0.25);
+      transition: transform 1.4s cubic-bezier(0.23, 1, 0.32, 1);
+    }
+
+    .spread-image-inner:hover img {
+      transform: scale(1.015);
+    }
+
+    .spread-text {
+      max-width: 360px;
+    }
+
+    .spread-title {
+      font-size: 48px;
+      font-weight: 300;
+      line-height: 0.98;
+      margin: 16px 0 24px;
+      color: #4A3A32;
+    }
+
+    /* ———— SERVICE CARDS — PURE WHITE, FLOATING ———— */
+    .service-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 90px;
+      margin-top: 70px;
+    }
+
+    .service-card {
+      background: white;
+      padding: 48px 36px;
+      box-shadow: 0 16px 32px -16px rgba(0,0,0,0.02);
+      display: flex;
+      flex-direction: column;
+      gap: 28px;
+      border: 0.5px solid rgba(198, 164, 108, 0.15);
+    }
+
+    .service-head {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .service-card h3 {
+      font-size: 30px;
+      font-weight: 300;
+      line-height: 1.0;
+    }
+
+    /* ———— RITUAL BANNER — MONUMENTAL ———— */
+    .ritual-banner {
+      display: flex;
+      align-items: center;
+      gap: 56px;
+      padding: 80px 0;
+      border-top: 0.5px solid #D8C3B2;
+      border-bottom: 0.5px solid #D8C3B2;
+      margin: 160px 0;
+    }
+
+    /* ———— BOOKING CHAMBER — YOUR THRONE ———— */
+    .booking-chamber {
+      background: white;
+      padding: 90px 80px;
+      box-shadow: 0 32px 56px -28px rgba(0,0,0,0.02);
+      margin: 180px 0;
+      border: 0.5px solid rgba(198, 164, 108, 0.15);
+    }
+
+    .booking-flex {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 120px;
+    }
+
+    .booking-form {
+      display: flex;
+      flex-direction: column;
+      gap: 32px;
+    }
+
+    .form-row {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .form-label {
+      font-size: 8px;
+      letter-spacing: 0.4em;
+      text-transform: uppercase;
+      color: #B7A79A;
+      font-weight: 200;
+    }
+
+    .form-input {
+      border: none;
+      border-bottom: 0.5px solid #D8C3B2;
+      background: transparent;
+      padding: 12px 0 8px;
+      font-size: 14px;
+      font-weight: 200;
+      outline: none;
+      color: #4A3A32;
+    }
+
+    .form-input:focus {
+      border-bottom-color: #C6A46C;
+    }
+
+    .btn-booking {
+      background: white;
+      border: 0.5px solid #C6A46C;
+      color: #4A3A32;
+      font-size: 9px;
+      letter-spacing: 0.55em;
+      text-transform: uppercase;
+      padding: 16px 32px;
+      align-self: flex-start;
+      cursor: pointer;
+      transition: 0.3s;
+      font-weight: 300;
+      margin-top: 16px;
+    }
+
+    .btn-booking:hover {
+      background: #C6A46C;
+      color: white;
+    }
+
+    .booking-highlight {
+      font-size: 36px;
+      font-weight: 300;
+      font-family: 'Cormorant Garamond', serif;
+      line-height: 1.05;
+      color: #4A3A32;
+      margin: 24px 0 16px;
+    }
+
+    /* ———— CONTACT CARD — YOUR SIGNATURE ———— */
+    .contact-details {
+      background: #F1ECE6;
+      padding: 36px;
+      margin-top: 40px;
+    }
+
+    .contact-line {
+      display: flex;
+      align-items: baseline;
+      gap: 20px;
+      font-size: 13px;
+      color: #4A3A32;
+      font-weight: 200;
+      letter-spacing: 0.06em;
+    }
+
+    /* ———— TRIPTYCH — YOUR THREE MASTERPIECES, FRAMED ———— */
+    .triptych {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      margin: 70px 0 40px;
+    }
+
+    .triptych-item {
+      aspect-ratio: 1/1;
+      background: white;
+      position: relative;
+      overflow: hidden;
+      border: 0.5px solid rgba(198, 164, 108, 0.25);
+      padding: 6px;
+    }
+
+    .triptych-item-inner {
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+    }
+
+    .triptych-item-inner img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      filter: grayscale(0.3);
+      transition: transform 1.2s cubic-bezier(0.23, 1, 0.32, 1);
+    }
+
+    .triptych-item-inner:hover img {
+      transform: scale(1.02);
+    }
+
+    .triptych-overlay {
+      position: absolute;
+      top: 6px; left: 6px; right: 6px; bottom: 6px;
+      background: rgba(74,58,50,0.02);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      transition: opacity 0.4s;
+      pointer-events: none;
+    }
+
+    .triptych-item:hover .triptych-overlay {
+      opacity: 1;
+    }
+
+    /* ———— FOOTER — YOUR LEGACY ———— */
+    .footer {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 140px;
+      margin-top: 180px;
+      padding: 80px 0 140px;
+      border-top: 0.5px solid #D8C3B2;
+    }
+
+    .footer-col p {
+      font-size: 8px;
+      letter-spacing: 0.45em;
+      text-transform: uppercase;
+      color: #B7A79A;
+      margin-bottom: 28px;
+    }
+
+    .footer-col a {
+      display: block;
+      font-size: 13px;
+      font-weight: 200;
+      color: #6F625A;
+      text-decoration: none;
+      margin-bottom: 14px;
+    }
+
+    .footer-col a:hover {
+      color: #C6A46C;
+    }
+
+    /* ———— POPUP — DISCREET, FUNCTIONAL ———— */
+    .popup {
+      position: fixed;
+      bottom: 40px;
+      right: 40px;
+      width: 360px;
+      background: white;
+      box-shadow: 0 32px 56px -28px rgba(0,0,0,0.03);
+      padding: 36px 32px;
+      z-index: 1200;
+      border: 0.5px solid rgba(198,164,108,0.2);
+    }
+
+    .popup-header {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 24px;
+    }
+
+    .popup-title {
+      font-size: 26px;
+      font-weight: 300;
+      color: #4A3A32;
+    }
+
+    .popup-close {
+      width: 44px;
+      height: 44px;
+      background: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 0.5px solid #D8C3B2;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+
+    .popup-close:hover {
+      background: #F8F6F3;
+    }
+
+    .popup-input {
+      width: 100%;
+      border: none;
+      border-bottom: 0.5px solid #D8C3B2;
+      padding: 14px 0 8px;
+      font-size: 13px;
+      background: transparent;
+      margin-bottom: 32px;
+      outline: none;
+    }
+
+    .popup-btn {
+      background: white;
+      border: 0.5px solid #C6A46C;
+      color: #4A3A32;
+      font-size: 8px;
+      letter-spacing: 0.45em;
+      text-transform: uppercase;
+      padding: 14px 28px;
+      cursor: pointer;
+      transition: 0.2s;
+    }
+
+    .popup-btn:hover {
+      background: #C6A46C;
+      color: white;
+    }
+
+    .hidden {
+      display: none !important;
+    }
+
+    /* ———— SLOW, SENSUAL, DIRECTIONAL — 1.3s DURATION ———— */
+    @keyframes slideLeft {
+      0% { opacity: 0; transform: translateX(24px); }
+      100% { opacity: 1; transform: translateX(0); }
+    }
+
+    @keyframes slideRight {
+      0% { opacity: 0; transform: translateX(-24px); }
+      100% { opacity: 1; transform: translateX(0); }
+    }
+
+    @keyframes slideUp {
+      0% { opacity: 0; transform: translateY(24px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+
+    .slide-left {
+      animation: slideLeft 1.3s cubic-bezier(0.23, 1, 0.32, 1) forwards;
+    }
+
+    .slide-right {
+      animation: slideRight 1.3s cubic-bezier(0.23, 1, 0.32, 1) forwards;
+    }
+
+    .slide-up {
+      animation: slideUp 1.3s cubic-bezier(0.23, 1, 0.32, 1) forwards;
+    }
+
+    .delay-1 { animation-delay: 0.15s; opacity: 0; }
+    .delay-2 { animation-delay: 0.3s; opacity: 0; }
+    .delay-3 { animation-delay: 0.45s; opacity: 0; }
+    .delay-4 { animation-delay: 0.6s; opacity: 0; }
+    .delay-5 { animation-delay: 0.75s; opacity: 0; }
+    .delay-6 { animation-delay: 0.9s; opacity: 0; }
+
+    @media (max-width: 1000px) {
+      .container { padding: 0 40px; }
+      .sticky-header { padding: 20px 40px; }
+      .hero-grid { grid-template-columns: 1fr; padding: 0 40px; }
+      .service-grid, .spread, .booking-flex, .triptych, .footer { grid-template-columns: 1fr; }
+      .nav-links { display: none; }
+      .hero-title { font-size: 56px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER — CROWN OF SILENCE -->
+  <header class="sticky-header slide-up">
+    <div class="logo-group">
+      <div class="orb orb-sm">
+        <img src="icons/icon-crown.gif" alt="crown" onerror="this.style.display='none'; this.parentElement.innerHTML='👑';">
+      </div>
+      <span class="logo-text">JUNE LACED</span>
+    </div>
+    <nav class="nav-links">
+      <a href="#">Atelier</a>
+      <a href="#">Services</a>
+      <a href="#">Book</a>
+    </nav>
+    <div style="width:44px;"></div>
+  </header>
+
+  <!-- HERO — SPLIT EDITORIAL · june4.jpg RIGHT · CONTENT LEFT · FRAMED -->
+  <section class="hero">
+    <div class="hero-grid">
+      <!-- LEFT: CONTENT + TESTAMENT SLIDER -->
+      <div class="hero-content">
+        <span class="hero-pre micro-caps slide-right delay-1">Private lace atelier</span>
+        <h1 class="hero-title slide-left delay-2">The Undone<br>Knot</h1>
+        <div class="hero-gold slide-right delay-3">Lifestyle</div>
+        <p class="hero-body slide-left delay-3">Custom lace blending · Silent suites · By appointment</p>
+        <div class="hero-buttons slide-up delay-4" style="display: flex; gap: 20px;">
+          <a href="#booking" class="btn-gold">
+            <span>BOOK NOW</span>
+            <span style="display:flex; background:white; border-radius:50%; padding:4px; width:26px; height:26px; align-items:center; justify-content:center;">
+              <img src="icons/icon-arrow.gif" alt="→" style="width:11px;" onerror="this.style.display='none';this.parentElement.innerHTML='→';">
+            </span>
+          </a>
+          <a href="#" class="btn-beige">
+            <span>INQUIRE</span>
+          </a>
+        </div>
+        
+        <!-- TESTAMENT SLIDER — WHY CHOOSE US — DOPE SHOWCASE -->
+        <div class="testament-slider">
+          <div class="testament-track">
+            <div class="testament-item">
+              <span class="testament-icon">—</span>
+              <span class="testament-text"><span class="testament-highlight">10+ years</span> of lace mastery</span>
+            </div>
+            <div class="testament-item">
+              <span class="testament-icon">—</span>
+              <span class="testament-text">Private suites · <span class="testament-highlight">no walk-ins</span></span>
+            </div>
+            <div class="testament-item">
+              <span class="testament-icon">—</span>
+              <span class="testament-text"><span class="testament-highlight">Ethically sourced</span> · single donor</span>
+            </div>
+            <div class="testament-item">
+              <span class="testament-icon">—</span>
+              <span class="testament-text">Invisible lace · <span class="testament-highlight">museum finish</span></span>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- RIGHT: FRAMED IMAGE — june4.jpg -->
+      <div class="hero-image-frame slide-left delay-2">
+        <div class="hero-image"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GOLD DIVIDER — THE FIRST WHISPER -->
+  <div class="container">
+    <div class="divider-gold slide-up"></div>
+  </div>
+
+  <!-- SPREAD — june2.jpg · FRAMED · EDITORIAL MAJESTY -->
+  <div class="container">
+    <div class="spread">
+      <div class="spread-image slide-left delay-1">
+        <div class="spread-image-inner">
+          <img src="images/june2.jpg" alt="frontal melt" onerror="this.style.display='none'; this.parentElement.innerHTML='<span style=color:#B7A79A;>june2.jpg</span>';">
+        </div>
+      </div>
+      <div class="spread-text slide-right delay-2">
+        <span class="gold-italics">The signature</span>
+        <h2 class="spread-title">Frontal melt.<br>Invisible lace.</h2>
+        <div style="width:60px; height:0.5px; background:#C6A46C; margin:28px 0;"></div>
+        <p class="micro-body" style="max-width:340px;">
+          Each application is a private study. No detail overlooked. 
+          Lace blended by hand, under natural light.
+        </p>
+        <span class="micro-legal" style="display:block; margin-top:32px;">02 — frontal series</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- SERVICES — THREE PILLARS OF EXCELLENCE, FRAMED CARDS -->
+  <div class="container section-sm">
+    <div style="display:flex; justify-content:space-between; align-items:baseline;">
+      <span class="micro-caps slide-right">Signature services</span>
+      <span class="gold-italics" style="font-size:10px;">03</span>
+    </div>
+    <div class="divider-gold" style="margin:28px 0 64px;"></div>
+
+    <div class="service-grid">
+      <!-- Virgin Install -->
+      <div class="service-card slide-up delay-1">
+        <div class="service-head">
+          <div class="orb">
+            <img src="icons/icon-lock.gif" alt="virgin" onerror="this.style.display='none';this.parentElement.innerHTML='🔒';">
+          </div>
+          <h3>Virgin<br>Install</h3>
+        </div>
+        <p class="micro-body" style="font-size:11px;">Ethically sourced, single donor. Custom color, lace cutting, invisible blend. 2.5h.</p>
+        <span class="micro-legal">By appointment</span>
+        <div style="margin-top:12px;">
+          <a href="#" class="btn-gold" style="padding:12px 24px; font-size:8px;">LEARN MORE</a>
+        </div>
+      </div>
+      <!-- Wig Finishing -->
+      <div class="service-card slide-up delay-2">
+        <div class="service-head">
+          <div class="orb">
+            <img src="icons/icon-mannequin.gif" alt="wig" onerror="this.style.display='none';this.parentElement.innerHTML='🪞';">
+          </div>
+          <h3>Wig<br>Finishing</h3>
+        </div>
+        <p class="micro-body" style="font-size:11px;">Frontal melt, closure flattening, full lace ventilation. Relacing & customization.</p>
+        <div style="display:flex; gap:24px;">
+          <span class="micro-legal">Frontal</span>
+          <span class="micro-legal">Closure</span>
+          <span class="micro-legal">Full lace</span>
+        </div>
+        <div style="margin-top:12px;">
+          <a href="#" class="btn-gold" style="padding:12px 24px; font-size:8px;">LEARN MORE</a>
+        </div>
+      </div>
+      <!-- Fitting Services -->
+      <div class="service-card slide-up delay-3">
+        <div class="service-head">
+          <div style="display:flex; gap:12px;">
+            <div class="orb orb-sm">
+              <img src="icons/icon-tape.gif" alt="rts" onerror="this.style.display='none';this.parentElement.innerHTML='📦';">
+            </div>
+            <div class="orb orb-sm">
+              <img src="icons/icon-scissors.gif" alt="custom" onerror="this.style.display='none';this.parentElement.innerHTML='✂️';">
+            </div>
+          </div>
+          <h3 style="font-size:28px;">Fitting<br>Services</h3>
+        </div>
+        <p class="micro-body" style="font-size:11px;">Ready-to-wear express fitting or bespoke consultation. Private suite.</p>
+        <div style="display:flex; gap:40px;">
+          <div><span class="micro-legal">Ready</span><br><span style="font-size:11px; color:#6F625A;">3 day</span></div>
+          <div><span class="micro-legal">Bespoke</span><br><span style="font-size:11px; color:#6F625A;">4–6 wk</span></div>
+        </div>
+        <div style="margin-top:12px;">
+          <a href="#" class="btn-gold" style="padding:12px 24px; font-size:8px;">LEARN MORE</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- RITUAL BANNER — ICONOGRAPHY + GOLD -->
+  <div class="container">
+    <div class="ritual-banner slide-up">
+      <div class="orb orb-lg">
+        <img src="icons/icon-drop.gif" alt="ritual" onerror="this.style.display='none';this.parentElement.innerHTML='💧';">
+      </div>
+      <div>
+        <h3 style="font-size:38px; font-weight:300; margin-bottom:8px; color:#4A3A32;">Hair rituals</h3>
+        <span class="micro-legal" style="font-size:9px;">Silk press · Steam treatment · Satin finish</span>
+      </div>
+      <a href="#" class="btn-gold" style="margin-left:auto; padding:14px 32px;">BOOK RITUAL</a>
+    </div>
+  </div>
+
+  <!-- BOOKING CHAMBER — YOUR CONTACT, YOUR THRONE, FRAMED -->
+  <div id="booking" class="container">
+    <div class="booking-chamber slide-up">
+      <div class="booking-flex">
+        <!-- LEFT: FORM -->
+        <div>
+          <span class="micro-caps" style="margin-bottom:20px;">Secure your session</span>
+          <h3 style="font-size:42px; font-weight:300; margin-bottom:32px; color:#4A3A32;">Request an<br>appointment</h3>
+          <div class="booking-form">
+            <div class="form-row">
+              <span class="form-label">Full name</span>
+              <input type="text" class="form-input" placeholder="Jane Doe" id="nameInput">
+            </div>
+            <div class="form-row">
+              <span class="form-label">Email</span>
+              <input type="email" class="form-input" placeholder="hello@junelaced.com" id="emailInput">
+            </div>
+            <div class="form-row">
+              <span class="form-label">Preferred date</span>
+              <input type="text" id="datePicker" class="form-input date-input" placeholder="Select date">
+            </div>
+            <div class="form-row">
+              <span class="form-label">Service</span>
+              <select class="form-input" id="serviceSelect" style="appearance:none;">
+                <option>Virgin Install</option>
+                <option>Wig Finishing</option>
+                <option>Fitting Service</option>
+                <option>Hair Ritual</option>
+              </select>
+            </div>
+            <button class="btn-booking" id="bookingButton">Confirm booking</button>
+            <span id="bookingFeedback" style="font-size:8px; color:#C6A46C; margin-top:8px; display:none;">✓ Request sent — we will reply within 24h.</span>
+          </div>
+        </div>
+        <!-- RIGHT: YOUR IDENTITY — PHONE, EMAIL, ICON -->
+        <div style="display:flex; flex-direction:column; gap:28px;">
+          <div class="orb orb-lg">
+            <img src="icons/icon-calendar.gif" alt="calendar" onerror="this.style.display='none';this.parentElement.innerHTML='📅';">
+          </div>
+          <div class="booking-highlight">
+            Private suites.<br>No walk-ins.<br>Lace blending.
+          </div>
+          <div class="contact-details">
+            <div class="contact-line">
+              <span class="gold-italics" style="font-size:9px;">call</span>
+              <span style="font-size:14px; letter-spacing:0.1em;">060683234242</span>
+            </div>
+            <div class="contact-line" style="margin-top:18px;">
+              <span class="gold-italics" style="font-size:9px;">email</span>
+              <span style="font-size:14px; letter-spacing:0.05em;">junelace@gmail.com</span>
+            </div>
+          </div>
+          <span class="micro-legal">↳ Vagaro / Square</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- TRIPTYCH — YOUR THREE MASTERPIECES: june5.jpg, june6.jpg, june1.jpg · FRAMED -->
+  <div class="container" style="margin-bottom:160px;">
+    <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:32px;">
+      <span class="micro-caps slide-right">Laced by june</span>
+      <span class="gold-italics">@junelaced</span>
+    </div>
+    <div class="triptych">
+      <div class="triptych-item slide-left delay-1">
+        <div class="triptych-item-inner">
+          <img src="images/june5.jpg" alt="install" onerror="this.src='https://images.pexels.com/photos/3993444/pexels-photo-3993444.jpeg?auto=compress&cs=tinysrgb&w=600';">
+        </div>
+        <div class="triptych-overlay">
+          <div class="orb-sm" style="background:white;"><img src="icons/icon-instagram.gif" style="width:100%;" onerror="this.style.display='none';this.parentElement.innerHTML='📷';"></div>
+        </div>
+      </div>
+      <div class="triptych-item slide-up delay-2">
+        <div class="triptych-item-inner">
+          <img src="images/june6.jpg" alt="lace" onerror="this.src='https://images.pexels.com/photos/3993451/pexels-photo-3993451.jpeg?auto=compress&cs=tinysrgb&w=600';">
+        </div>
+        <div class="triptych-overlay">
+          <div class="orb-sm" style="background:white;"><img src="icons/icon-instagram.gif" style="width:100%;"></div>
+        </div>
+      </div>
+      <div class="triptych-item slide-right delay-3">
+        <div class="triptych-item-inner">
+          <img src="images/june1.jpg" alt="styling" onerror="this.src='https://images.pexels.com/photos/3993455/pexels-photo-3993455.jpeg?auto=compress&cs=tinysrgb&w=600';">
+        </div>
+        <div class="triptych-overlay">
+          <div class="orb-sm" style="background:white;"><img src="icons/icon-instagram.gif" style="width:100%;"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER — YOUR SIGNATURE -->
+  <div class="container footer">
+    <div class="footer-col">
+      <p>Studio</p>
+      <a href="#">junelace@gmail.com</a>
+      <a href="#">060683234242</a>
+      <a href="#">Private suite, SoHo</a>
+    </div>
+    <div class="footer-col">
+      <p>Experience</p>
+      <a href="#">Booking policy</a>
+      <a href="#">Lace guarantee</a>
+      <a href="#">Privacy</a>
+    </div>
+    <div class="footer-col">
+      <p>Client care</p>
+      <a href="#">Consultation guide</a>
+      <a href="#">Preparation</a>
+      <div style="margin-top:32px;">
+        <span class="micro-legal">Receive lookbook</span>
+        <input type="email" placeholder="Email" class="form-input" style="margin-top:8px; width:100%;">
+      </div>
+    </div>
+  </div>
+
+  <!-- POPUP — DISCREET, FUNCTIONAL -->
+  <div id="promoPopup" class="popup slide-up">
+    <div class="popup-header">
+      <h3 class="popup-title">Unlace the discount.</h3>
+      <div class="popup-close" id="closePopupBtn">
+        <img src="icons/icon-close.gif" alt="close" style="width:18px; height:18px;" onerror="this.style.display='none';this.parentElement.innerHTML='✕';">
+      </div>
+    </div>
+    <p class="micro-body" style="margin-bottom:24px; font-size:12px;">5% off your first installation. No spam, only silk.</p>
+    <input type="email" placeholder="Your email address" class="popup-input" id="popupEmail">
+    <button class="popup-btn" id="popupSubscribeBtn">Subscribe</button>
+    <span id="popupFeedback" style="display:none; font-size:7px; color:#C6A46C; margin-top:16px;">✓ Thank you</span>
+    <div class="micro-legal" style="margin-top:20px;">Unsubscribe anytime</div>
+  </div>
+
+  <!-- ICON DIRECTORY — YOUR NAMING, YOUR SYSTEM -->
+  <div style="padding:20px 140px; font-size:6px; color:#B7A79A; border-top:0.5px solid #D8C3B2; display:flex; gap:28px; flex-wrap:wrap; letter-spacing:0.12em;">
+    <span>📁 /icons — white orb vessels</span>
+    <span>icon-crown.gif</span> <span>icon-scissors.gif</span> <span>icon-tape.gif</span> <span>icon-mannequin.gif</span> 
+    <span>icon-drop.gif</span> <span>icon-calendar.gif</span> <span>icon-lock.gif</span> <span>icon-instagram.gif</span> 
+    <span>icon-close.gif</span> <span>icon-arrow.gif</span>
+  </div>
+
+  <!-- PURE JS — FLATPICKR, POPUP, BOOKING, SUBSCRIBE -->
+  <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+  <script>
+    // FLATPICKR — DATE PICKER
+    flatpickr("#datePicker", {
+      minDate: "today",
+      dateFormat: "F j, Y",
+      placeholder: "Select date"
+    });
+
+    // POPUP CLOSE — FULLY FUNCTIONAL
+    const popup = document.getElementById('promoPopup');
+    const closeBtn = document.getElementById('closePopupBtn');
+    closeBtn.addEventListener('click', function() {
+      popup.style.display = 'none';
+    });
+
+    // BOOKING BUTTON — FEEDBACK
+    const bookingBtn = document.getElementById('bookingButton');
+    const feedbackSpan = document.getElementById('bookingFeedback');
+    bookingBtn.addEventListener('click', function(e) {
+      e.preventDefault();
+      feedbackSpan.style.display = 'block';
+    });
+
+    // POPUP SUBSCRIBE BUTTON — FEEDBACK
+    const subscribeBtn = document.getElementById('popupSubscribeBtn');
+    const popupFeedback = document.getElementById('popupFeedback');
+    subscribeBtn.addEventListener('click', function(e) {
+      e.preventDefault();
+      popupFeedback.style.display = 'block';
+    });
+
+    // STICKY HEADER SCROLL EFFECT
+    window.addEventListener('scroll', function(){
+      const header = document.querySelector('.sticky-header');
+      if(window.scrollY > 20) {
+        header.style.background = 'rgba(248, 246, 243, 0.85)';
+        header.style.boxShadow = '0 4px 24px rgba(0,0,0,0.01)';
+      } else {
+        header.style.background = 'rgba(248, 246, 243, 0.72)';
+        header.style.boxShadow = 'none';
+      }
+    });
+  </script>
+</body>
+</html>
